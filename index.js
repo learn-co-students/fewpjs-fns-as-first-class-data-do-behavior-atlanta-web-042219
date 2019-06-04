@@ -8,10 +8,11 @@ function handleClick(e) {
 /* End Given Code, don't edit above here...*/
 
 /* Write your implementation of greet() */
-function greet(data) {
-  if (data < 12 ) {
+function greet(rawData) {
+  const parsedData = parseInt(rawData, 10);
+  if (parsedData <= 12) {
     return "Good Morning";
-  } else if (data > 12 && data < 17) {
+  } if (parsedData > 12 && parsedData < 17) {
     return "Good Afternoon";
   } else {
     return "Good Evening";
@@ -19,3 +20,6 @@ function greet(data) {
 }
 
 /* Write your implementation of displayMessage() */
+function displayMessage(string) {
+  document.getElementById('greeting').innerText = string;
+}
